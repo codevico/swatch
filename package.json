@@ -1,0 +1,23 @@
+{
+  "name": "swatch",
+  "version": "0.1.0",
+  "description": "Swatch clock",
+  "main": "swatch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codevico/swatch.git"
+  },
+  "keywords": [
+    "swatch",
+    "clock"
+  ],
+  "author": "vico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codevico/swatch/issues"
+  },
+  "homepage": "https://github.com/codevico/swatch#readme"
+}
