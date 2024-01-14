@@ -34,4 +34,5 @@ const mySwatch = Swatch('.mySwatch', {
 
 mySwatch.stop() // Stop updating
 mySwatch.start() // Resume updating
+mySwatch.refresh() // Manually update the value (if stopped)
 ```

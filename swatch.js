@@ -17,19 +17,19 @@
     var Swatch = (obj, options) => {
         const instance = {}
         options = {...defaults, ...options}
-        instance.refreshSwatchClock = function() {
+        instance.refresh = function() {
             instance.element.innerText = (instance.options.prefix) + getSwatchTime()
         }
-        instance.renderSwatchClock = function() {
-            const interval = setInterval(instance.refreshSwatchClock, instance.options.millis)
-            instance.refreshSwatchClock()
+        instance.render = function() {
+            const interval = setInterval(instance.refresh, instance.options.millis)
+            instance.refresh()
             return interval
         }
         instance.start = function() {
             if (instance.refreshInterval) {
                 console.info('Already started.')
             } else {
-                instance.refreshInterval = instance.renderSwatchClock()
+                instance.refreshInterval = instance.render()
             }
         }
         instance.stop = function() {
@@ -49,7 +49,7 @@
         if (instance.options.realTime) {
             instance.start()
         } else {
-            instance.refreshSwatchClock()
+            instance.refresh()
         }
         return instance
     }
